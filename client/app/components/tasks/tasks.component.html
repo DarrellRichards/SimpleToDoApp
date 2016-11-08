@@ -1,0 +1,35 @@
+<form (submit)="addTask($event)">
+      <div class="form-group">
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add ToDo....">    
+      </div>  
+</form>
+
+<style>
+    .remove{
+        color: red;
+        cursor: pointer;
+    }
+    .whiteout {
+        height: 5px;
+        background: red;
+        opacity: .3;
+        position: relative;
+        top: 13px;
+    }
+</style>
+
+<div class="task-list">
+    <div *ngFor="let task of tasks">
+        <div [class.whiteout]="task.isDone"></div>
+        <div class="col-md-1">  
+            <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)">
+        </div>
+        <div class="col-md-7">
+            {{task.title}}    
+        </div> 
+        <div class="col-md-4">
+            <a class="remove" (click)="deleteTask(task._id)">Delete</a>  
+        </div>
+        <br><br>
+    </div>
+</div>

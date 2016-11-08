@@ -1,0 +1,20 @@
+{
+  "name": "simpletodoapp",
+  "description": "Simple Todo App",
+  "main": "server.js",
+  "authors": [
+    "Darrell Richards Jr"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
